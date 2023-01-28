@@ -1,4 +1,6 @@
-﻿    <!-- ===== services ===== -->
+﻿@model List<Team>
+
+    <!-- ===== services ===== -->
 <section id="services">
     <div class="container">
         <div class="row">
@@ -159,43 +161,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="~/assets/img/Alexandra-M-Team-Leader.png" class="img-responsive img-circle" alt="">
-                    <h4 style="color:#3680C1">Easton Garland</h4>
-                    <p class="text-muted">Team Leader</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
+            @foreach (Team team in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="~/uploads/teams/@team.ImageUrl" class="img-responsive img-circle" alt="">
+                        <h4 style="color:#3680C1">@team.FullName</h4>
+                        <p class="text-muted">@team.Profession.Name</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="@team.Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="@team.Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="@team.Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="~/assets/img/Zac-Efron-7-1600.png" class="img-responsive img-circle" alt="">
-                    <h4 style="color:#3680C1">Ellis Smith</h4>
-                    <p class="text-muted">Lead Developer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="~/assets/img/beautiful-smile-girl.png" class="img-responsive img-circle" alt="">
-                    <h4 style="color:#3680C1">Spring Ross</h4>
-                    <p class="text-muted">Lead Designer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            }
+            
     </div>
 </section>
 <!-- ===== Contact Us ===== -->

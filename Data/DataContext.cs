@@ -13,5 +13,6 @@ namespace Studio.Data
         public DbSet<Team> teams { get; set; }
         public DbSet<Profession> professions { get; set; }
         public DbSet<AppUser> appusers { get; set; }
+        public DbSet<Setting> settings { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0JuCH6RHgZL/V7KGqQ1V6I7h2GsccGnuxda/SEU+OBY=",
+  "Hash": "Ic9kguH+YTaMkvTEs20RnkL3SWLyPqnrpCPGe89EM6k=",
   "Source": "Studio",
   "BasePath": "_content/Studio",
   "Mode": "Default",
@@ -32247,6 +32247,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\teams\\ef95508b-6b3c-4425-9bdf-9680dbc2d821Zac-Efron-7-1600.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\uploads\\teams\\f5155140-03a4-4526-aa18-7bcaf17e28c6ia-z4-tablet-black-1240x840-a07acf270af4d6789d0e83aea747b064.png",
+      "SourceId": "Studio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\",
+      "BasePath": "_content/Studio",
+      "RelativePath": "uploads/teams/f5155140-03a4-4526-aa18-7bcaf17e28c6ia-z4-tablet-black-1240x840-a07acf270af4d6789d0e83aea747b064.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\f5155140-03a4-4526-aa18-7bcaf17e28c6ia-z4-tablet-black-1240x840-a07acf270af4d6789d0e83aea747b064.png"
     }
   ]
 }

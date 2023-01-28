@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Studio.Areas.Admin.Services;
 using Studio.Data;
 using Studio.Models;
+using Studio.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.User.RequireUniqueEmail = false;
 }).AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<LayoutService>();
+builder.Services.AddScoped<NormalLayoutService>();
 var app = builder.Build();
 
 

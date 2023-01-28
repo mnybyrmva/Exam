@@ -1,4 +1,8 @@
-﻿<!DOCTYPE HTML>
+﻿@inject Studio.Services.NormalLayoutService service
+@{
+    List<Setting> settings = await service.GetSetting();
+}
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Studio</title>
@@ -53,9 +57,9 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4 col-md-offset-">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="@settings.FirstOrDefault(x=>x.Key=="Twitter")?.Value" class="fa fa-twitter"></i></a></li>
+                        <li><a href="@settings.FirstOrDefault(x=>x.Key=="Facebook")?.Value"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="@settings.FirstOrDefault(x=>x.Key=="Linkedin")?.Value"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4"></div>

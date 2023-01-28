@@ -28,11 +28,11 @@
                         <td>@team.Id</td>
                         <td>@team.FullName</td>
                         <td>@team.Profession.Name</td>
-                        <td style="width:200px"><img width="!00%" src="~/assets/img/@team.ImageUrl"/></td>
-                        <td>@team.FullName</td>
+                        <td style="width:200px"><img width="!00%" src="~/uploads/teams/@team.ImageUrl"/></td>
+                        
                         <td>
-                            <a asp-action="Update" asp-controller="Profession" asp-route-id="@team.Id" class="btn btn-primary">Update</a>
-                            <a asp-action="Update" asp-controller="Profession" asp-route-id="@team.Id" class="btn btn-danger">Delete</a>
+                            <a asp-action="Update" asp-controller="Team" asp-route-id="@team.Id" class="btn btn-primary">Update</a>
+                            <a asp-action="Update" asp-controller="Team" asp-route-id="@team.Id" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 }

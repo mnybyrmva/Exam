@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@inject Studio.Areas.Admin.Services.LayoutService service
+@{
+    AppUser user = await service.GetUser();
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" asp-action="index" asp-controller="Dashboard">
+                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -51,7 +55,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-           
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -62,21 +65,15 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a asp-action="index" asp-controller="Team" class="collapse-item" >Teams</a>
-                        <a asp-action="index" asp-controller="Profession"  class="collapse-item">Profession</a>
-                        <a asp-action="index" asp-controller="Setting"  class="collapse-item" >Settings</a>
+                        <h6 class="collapse-header">All sections:</h6>
+                        <a class="collapse-item" asp-action="index" asp-controller="team">Teams:</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="profession">Profession</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="setting">Setting</a>
                         <div class="collapse-divider"></div>
-                        
+
                     </div>
                 </div>
             </li>
-
-          
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -91,20 +88,11 @@
 
         </ul>
         <!-- End of Sidebar -->
-@RenderBody()
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+        @RenderBody()
 
-        </div>
-        <!-- End of Content Wrapper -->
 
+    </div>
+    <!-- End of Content Wrapper -->
     </div>
     <!-- End of Page Wrapper -->
     <!-- Scroll to Top Button-->
@@ -126,7 +114,8 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+
+                    <a class="btn btn-primary" asp-action="logout" asp-controller="account">Logout</a>
                 </div>
             </div>
         </div>
@@ -140,14 +129,14 @@
     <script src="~/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="~/admin/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
     <script src="~/admin/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="~/admin/js/demo/chart-area-demo.js"></script>
+    <script src="~/admin/js/demo/chart-pie-demo.js"></script>
 
 </body>
 

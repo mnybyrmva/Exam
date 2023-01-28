@@ -1,0 +1,42 @@
+﻿@model Team
+<div class="container">
+    <h1>Create:</h1>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="FullName" class="form-label">FullName</label>
+                <input asp-for="FullName" class="form-control">
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label">Image</label>
+                <input asp-for="ImageFile" class="form-control">
+            </div>
+            <div class="mb-3">
+                <select asp-for="ProfessionId" class="form-select">
+                    <option asp-for="ProfessionId" selected>Open this select menu</option>
+                    @foreach (Profession profession in ViewBag.Profession)
+                    {
+                        <option value="@profession.Id">@profession.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Facebook" class="form-label">Facebook</label>
+                <input asp-for="Facebook" class="form-control">
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="Twitter" class="form-label">Twitter</label>
+                <input asp-for="Twitter" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Linkedin" class="form-label">Linkedin</label>
+                <input asp-for="Linkedin" class="form-control">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>

@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Studio.Areas.Admin.Services;
 using Studio.Data;
+using Studio.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddMvc();
 builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer("server=DESKTOP-HD09TL8;database=studioDb;Trusted_Connection=true;"));
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.Password.RequiredUniqueChars = 0;
+    opt.Password.RequireUppercase = true;
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireLowercase = true;
+    opt.Password.RequireDigit = true;
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.User.RequireUniqueEmail = false;
+}).AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+builder.Services.AddScoped<LayoutService>();
 var app = builder.Build();
 
 

@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Studio.Data;
 using Studio.Models;
+using System.Data;
 
 namespace Studio.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin")]
+
     public class ProfessionController : Controller
     {
         private readonly DataContext _dataContext;
@@ -21,7 +25,6 @@ namespace Studio.Areas.Admin.Controllers
         }
         public IActionResult Create()
         {
-            
             return View();
         }
         [HttpPost]

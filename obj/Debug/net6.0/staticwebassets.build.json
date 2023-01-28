@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZdRGLk/uX2Z7ywC81QTDKyX18ugcOofAyFOEEqcUn7w=",
+  "Hash": "0JuCH6RHgZL/V7KGqQ1V6I7h2GsccGnuxda/SEU+OBY=",
   "Source": "Studio",
   "BasePath": "_content/Studio",
   "Mode": "Default",
@@ -32196,6 +32196,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\uploads\\teams\\5e9c3079-c8a6-4064-a374-8e00a8cb3a28beautiful-smile-girl.png",
+      "SourceId": "Studio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\",
+      "BasePath": "_content/Studio",
+      "RelativePath": "uploads/teams/5e9c3079-c8a6-4064-a374-8e00a8cb3a28beautiful-smile-girl.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\5e9c3079-c8a6-4064-a374-8e00a8cb3a28beautiful-smile-girl.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\uploads\\teams\\c08eec04-37cb-4aef-abcd-e32160223349Alexandra-M-Team-Leader.png",
+      "SourceId": "Studio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\",
+      "BasePath": "_content/Studio",
+      "RelativePath": "uploads/teams/c08eec04-37cb-4aef-abcd-e32160223349Alexandra-M-Team-Leader.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\c08eec04-37cb-4aef-abcd-e32160223349Alexandra-M-Team-Leader.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\uploads\\teams\\ef95508b-6b3c-4425-9bdf-9680dbc2d821Zac-Efron-7-1600.png",
+      "SourceId": "Studio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Studio\\wwwroot\\",
+      "BasePath": "_content/Studio",
+      "RelativePath": "uploads/teams/ef95508b-6b3c-4425-9bdf-9680dbc2d821Zac-Efron-7-1600.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\ef95508b-6b3c-4425-9bdf-9680dbc2d821Zac-Efron-7-1600.png"
     }
   ]
 }
